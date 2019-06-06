@@ -43,11 +43,51 @@
                     <connections>
                         <outlet property="tableView" destination="s08-GH-lMv" id="krf-6H-YRJ"/>
                         <segue destination="iA1-uC-Doy" kind="show" identifier="addTaskSegue" id="tXV-ln-Qyu"/>
+                        <segue destination="LlM-Te-Uhe" kind="show" identifier="selectTaskSegue" id="5vd-sG-4GF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="886" y="686"/>
+        </scene>
+        <!--Complete Task View Controller-->
+        <scene sceneID="UoP-xe-4H2">
+            <objects>
+                <viewController id="LlM-Te-Uhe" customClass="CompleteTaskViewController" customModule="DoIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TOJ-wa-I3x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AqM-nC-g7B">
+                                <rect key="frame" x="152" y="114" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZiP-vW-yr1">
+                                <rect key="frame" x="154" y="185" width="67" height="30"/>
+                                <state key="normal" title="Complete"/>
+                                <connections>
+                                    <action selector="completeTapped:" destination="LlM-Te-Uhe" eventType="touchUpInside" id="ruV-cx-MVv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AqM-nC-g7B" firstAttribute="top" secondItem="I0A-Yv-gdq" secondAttribute="top" constant="50" id="W0X-mr-6Iv"/>
+                            <constraint firstItem="AqM-nC-g7B" firstAttribute="centerX" secondItem="TOJ-wa-I3x" secondAttribute="centerX" id="fKh-0m-Rul"/>
+                            <constraint firstItem="ZiP-vW-yr1" firstAttribute="centerX" secondItem="TOJ-wa-I3x" secondAttribute="centerX" id="pZN-8y-Tq2"/>
+                            <constraint firstItem="ZiP-vW-yr1" firstAttribute="top" secondItem="AqM-nC-g7B" secondAttribute="bottom" constant="35" id="y12-dz-V45"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I0A-Yv-gdq"/>
+                    </view>
+                    <connections>
+                        <outlet property="completeLabel" destination="AqM-nC-g7B" id="duN-KS-Nuy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QPf-ks-Rur" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886" y="1431"/>
         </scene>
         <!--Create Task View Controller-->
         <scene sceneID="sTg-Yd-SBQ">
